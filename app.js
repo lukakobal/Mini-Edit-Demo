@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./styles.css";
 
 export default function App() {
   const [tasks, setTasks] = useState([
@@ -13,7 +14,7 @@ export default function App() {
       <h1>Mini Edit Demo</h1>
 
       {tasks.map((t) => (
-        <div key={t.id}>
+        <div className="task" key={t.id}>
           {editingId === t.id ? (
             <input />
           ) : (
